@@ -293,7 +293,7 @@ function list(path) {
   <div id="update"></div>
     <div id="head_md" style="display:none; padding: 20px 20px;"></div>
     <div class="justify-items-start">
-  <nav'>';" aria-label="breadcrumb">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
     <div class="breadcrumb" id="folderne"><a class="breadcrumb-item"><a href="/">Home</a></a>`;
     var navlink = '';
     var navfulllink = window.location.pathname;
