@@ -317,7 +317,7 @@ function list(path) {
             if (n === '') {
                 break;
             }
-            content += `<li class="breadcrumb-item"><a href="${p}">${n}</a></li>`;
+            content += `<div class="breadcrumb-item"><a href="${p}">${n}</a></div>`;
         }
     }
     content += `</ol>
