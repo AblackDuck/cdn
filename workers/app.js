@@ -294,7 +294,7 @@ function list(path) {
     <div id="head_md" style="display:none; padding: 20px 20px;"></div>
     <div class="${UI.path_nav_alert_class} d-flex align-items-center" role="alert" ">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <ol class="breadcrumb" id="folderne"><li class="breadcrumb-item"><a href="/">Home</a></li>`;
+    <ol class="breadcrumb" id="folderne"><div class="breadcrumb-item"><a href="/">Home</a></div>`;
     var navlink = '';
     var navfulllink = window.location.pathname;
     var breadbar = '';
