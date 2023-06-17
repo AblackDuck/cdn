@@ -829,7 +829,7 @@ function file_others(path) {
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
 </div>
 <div class="flex justify-center">
-<div class="input-group mb-4 hidden">
+<div class="input-group mb-4 ">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
   </div>
@@ -899,7 +899,7 @@ function file_code(path) {
 </div>
 </div>
 <div class="flex justify-center">
-<div class="input-group mb-4 hidden">
+<div class="input-group mb-4 ">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
   </div>
@@ -990,7 +990,7 @@ function file_video(path) {
   </script></br>
 ${UI.disable_video_download ? `` : `
 <div class="flex justify-center">
-<div class="input-group mb-4 hidden">
+<div class="input-group mb-4 ">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
   </div>
@@ -1178,7 +1178,7 @@ function file_pdf(path) {
   <canvas id="the-canvas" style="max-width: 100%;"></canvas>
   </div>
   <div class="flex justify-center">
-<div class="input-group mb-4 hidden">
+<div class="input-group mb-4 ">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
   </div>
@@ -1279,7 +1279,7 @@ function file_image(path) {
   <img src="${url}" width="50%">
   </div>
   <div class="flex justify-center">
-<div class="input-group mb-4 hidden">
+<div class="input-group mb-4 ">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
   </div>
