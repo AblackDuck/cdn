@@ -8,7 +8,7 @@ function init() {
    </div>
 </header>
 <div>
-<div id="content" style="padding-top: ${UI.header_padding}px;${UI.fixed_footer ? ' padding-bottom: clamp(170px, 100%, 300px);' : ''}">
+<div id="content" style="padding-top: ${UI.header_padding}px;${UI.fixed_footer ?' padding-bottom: clamp(170px, 100%, 300px);': ''}">
 </div>
 <div class="modal fade" id="SearchModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="SearchModelLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -27,7 +27,7 @@ function init() {
   </div>
 </div>
 <br>
-<footer class="footer mt-auto py-3 text-muted ${UI.footer_style_class}" style="${UI.fixed_footer ? 'position: fixed; ' : ''}left: 0; bottom: 0; width: 100%; color: white; z-index: 9999;${UI.hide_footer ? ' display:none;' : ' display:block;'}"> <div class="container" style="width: auto; padding: 0 10px;"> <p class="float-end"> <a href="#">Back to top</a> </p> ${UI.credit ? '<p>Redesigned with <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" /> </svg> by <a href="https://www.npmjs.com/package/@googledrive/index" target="_blank">TheFirstSpeedster</a>, based on Open Source Softwares.</p>' : ''} <p>© ${UI.copyright_year} - <a href=" ${UI.company_link}" target="_blank"> ${UI.company_name}</a>, All Rights Reserved.</p> </div> </footer>
+<footer class="footer mt-auto py-3 text-muted ${UI.footer_style_class}" style="${UI.fixed_footer ?'position: fixed; ': ''}left: 0; bottom: 0; width: 100%; color: white; z-index: 9999;${UI.hide_footer ? ' display:none;': ' display:block;'}"> <div class="container" style="width: auto; padding: 0 10px;"> <p class="float-end"> <a href="#">Back to top</a> </p> ${UI.credit ? '<p>Redesigned with <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" /> </svg> by <a href="https://www.npmjs.com/package/@googledrive/index" target="_blank">TheFirstSpeedster</a>, based on Open Source Softwares.</p>' : ''} <p>© ${UI.copyright_year} - <a href=" ${UI.company_link}" target="_blank"> ${UI.company_name}</a>, All Rights Reserved.</p> </div> </footer>
   `;
     $('body').html(html);
 }
@@ -53,7 +53,7 @@ function getDocumentHeight() {
 function gdidecode(str) {
     var gdijsorg_0x5579 = ['join', 'toString', '114773LJlqPi', 'charCodeAt', '1evaKJu', '128429mQiVMM', '179727icrnig', '1276161MsgKkV', 'map', '111987FmCZVm', '6IEPbgT', '1924817UdCjIN', '328673bHHLnC', '14sGLkvR'];
     var gdijsorg_0x22bf03 = gdijsorg_0x47d3;
-    (function (_0x2015a9, _0x2d2e6f) {
+    (function(_0x2015a9, _0x2d2e6f) {
         var _0x194131 = gdijsorg_0x47d3;
         while (!![]) {
             try {
@@ -71,7 +71,7 @@ function gdidecode(str) {
         var _0x557938 = gdijsorg_0x5579[_0x4aefd5];
         return _0x557938;
     }
-    return decodeURIComponent(atob(str)['split']('')[gdijsorg_0x22bf03(0x16b)](function (_0x1cdc7a) {
+    return decodeURIComponent(atob(str)['split']('')[gdijsorg_0x22bf03(0x16b)](function(_0x1cdc7a) {
         var _0x416153 = gdijsorg_0x22bf03;
         return '%' + ('00' + _0x1cdc7a[_0x416153(0x166)](0x0)[_0x416153(0x164)](0x10))['slice'](-0x2);
     })[gdijsorg_0x22bf03(0x163)](''));
@@ -128,9 +128,9 @@ function nav(path) {
     var model = window.MODEL;
     var html = "";
     var cur = window.current_drive_order || 0;
-    html += `<nav class="navbar navbar-expand-lg${UI.fixed_header ? ' fixed-top' : ''} ${UI.header_style_class}">
+    html += `<nav class="navbar navbar-expand-lg${UI.fixed_header ?' fixed-top': ''} ${UI.header_style_class}">
     <div class="container-fluid">
-  <a class="navbar-brand" href="/0:/">${UI.logo_image ? '<img border="0" alt="' + UI.company_name + '" src="' + UI.logo_link_name + '" height="' + UI.logo_height + '" width="' + UI.logo_width + '">' : UI.logo_link_name}</a>
+  <a class="navbar-brand" href="/0:/">${UI.logo_image ? '<img border="0" alt="'+UI.company_name+'" src="'+UI.logo_link_name+'" height="'+UI.logo_height+'" width="'+UI.logo_width+'">' : UI.logo_link_name}</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -139,8 +139,8 @@ function nav(path) {
       <li class="nav-item">
         <a class="nav-link" href="/${cur}:/">${UI.nav_link_1}</a>
       </li>`;
-    var names = window.drive_names;
-    var drive_name = window.drive_names[cur];
+   /*  var names = window.drive_names; */
+   /*  var drive_name = window.drive_names[cur]; */
 
     // Dropdown to select different drive roots.
     html += `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${drive_name}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown">`;
@@ -179,7 +179,7 @@ function nav(path) {
 
     html += `</div></li><li class="nav-item">
     <a class="nav-link" href="${UI.contact_link}" target="_blank">${UI.nav_link_4}</a>
-  </li>${UI.show_logout_button ? '<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>' : ''}`;
+  </li>${UI.show_logout_button ?'<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>': ''}`;
 
     var search_text = model.is_search_page ? (model.q || '') : '';
     const isMobile = Os.isMobile;
@@ -226,7 +226,7 @@ function requestListPath(path, params, resultCallback, authErrorCallback) {
         page_index: params['page_index'] || 0
     };
     $('#update').html(`<div class='alert alert-info' role='alert'> Connecting...</div></div></div>`);
-    $.post(path, p, function (data, status) {
+    $.post(path, p, function(data, status) {
         var res = jQuery.parseJSON(gdidecode(read(data)));
         if (res && res.error && res.error.code == '401') {
             // Password verification failed
@@ -239,10 +239,10 @@ function requestListPath(path, params, resultCallback, authErrorCallback) {
             if (resultCallback) resultCallback(res, path, p)
             $('#update').remove();
         }
-    }).fail(function (response) {
+    }).fail(function(response) {
         sleep(2000);
         $('#update').html(`<div class='alert alert-info' role='alert'> Retrying...</div></div></div>`);
-        $.post(path, p, function (data, status) {
+        $.post(path, p, function(data, status) {
             var res = jQuery.parseJSON(gdidecode(read(data)));
             if (res && res.error && res.error.code == '401') {
                 // Password verification failed
@@ -255,10 +255,10 @@ function requestListPath(path, params, resultCallback, authErrorCallback) {
                 if (resultCallback) resultCallback(res, path, p)
                 $('#update').remove();
             }
-        }).fail(function (response) {
+        }).fail(function(response) {
             sleep(2000);
             $('#update').html(`<div class='alert alert-info' role='alert'> Retrying...</div></div></div>`);
-            $.post(path, p, function (data, status) {
+            $.post(path, p, function(data, status) {
                 var res = jQuery.parseJSON(gdidecode(read(data)));
                 if (res && res.error && res.error.code == '401') {
                     // Password verification failed
@@ -271,7 +271,7 @@ function requestListPath(path, params, resultCallback, authErrorCallback) {
                     if (resultCallback) resultCallback(res, path, p)
                     $('#update').remove();
                 }
-            }).fail(function (response) {
+            }).fail(function(response) {
                 $('#update').html(`<div class='alert alert-danger' role='alert'> Unable to get data from the server, Something went wrong.</div></div></div>`);
                 $('#list').html(`<div class='alert alert-danger' role='alert'> We were unable to get data from the server.</div></div></div>`);
                 $('#spinner').remove();
@@ -293,7 +293,7 @@ function requestSearch(params, resultCallback) {
         page_index: params['page_index'] || 0
     };
     $('#update').html(`<div class='alert alert-info' role='alert'> Connecting...</div></div></div>`);
-    $.post(`/${window.current_drive_order}:search`, p, function (data, status) {
+    $.post(`/${window.current_drive_order}:search`, p, function(data, status) {
         var res = jQuery.parseJSON(gdidecode(read(data)));
         if (res && res.data === null) {
             $('#spinner').remove();
@@ -304,10 +304,10 @@ function requestSearch(params, resultCallback) {
             if (resultCallback) resultCallback(res, p)
             $('#update').remove();
         }
-    }).fail(function (response) {
+    }).fail(function(response) {
         sleep(2000);
         $('#update').html(`<div class='alert alert-info' role='alert'> Retrying...</div></div></div>`);
-        $.post(`/${window.current_drive_order}:search`, p, function (data, status) {
+        $.post(`/${window.current_drive_order}:search`, p, function(data, status) {
             var res = jQuery.parseJSON(gdidecode(read(data)));
             if (res && res.data === null) {
                 $('#spinner').remove();
@@ -318,10 +318,10 @@ function requestSearch(params, resultCallback) {
                 if (resultCallback) resultCallback(res, p)
                 $('#update').remove();
             }
-        }).fail(function (response) {
+        }).fail(function(response) {
             sleep(2000);
             $('#update').html(`<div class='alert alert-info' role='alert'> Retrying...</div></div></div>`);
-            $.post(`/${window.current_drive_order}:search`, p, function (data, status) {
+            $.post(`/${window.current_drive_order}:search`, p, function(data, status) {
                 var res = jQuery.parseJSON(gdidecode(read(data)));
                 if (res && res.data === null) {
                     $('#spinner').remove();
@@ -332,7 +332,7 @@ function requestSearch(params, resultCallback) {
                     if (resultCallback) resultCallback(res, p)
                     $('#update').remove();
                 }
-            }).fail(function (response) {
+            }).fail(function(response) {
                 $('#update').html(`<div class='alert alert-danger' role='alert'> Unable to get data from the server, Something went wrong. 3 Failures</div></div></div>`);
                 $('#list').html(`<div class='alert alert-danger' role='alert'> We were unable to get data from the server.</div></div></div>`);
                 $('#spinner').remove();
@@ -343,7 +343,7 @@ function requestSearch(params, resultCallback) {
 
 // Render file list
 function list(path) {
-    var content = `<div class="container">${UI.fixed_header ? '<br>' : ''}
+    var content = `<div class="container">${UI.fixed_header ?'<br>': ''}
   <div id="update"></div>
     <div id="head_md" style="display:none; padding: 20px 20px;"></div>
     <div class="${UI.path_nav_alert_class} d-flex align-items-center" role="alert" style="margin-bottom: 0; padding-bottom: 0rem;">
@@ -417,7 +417,7 @@ function list(path) {
             append_files_to_list(path, res['data']['files']);
             if (window.scroll_status.event_bound !== true) {
                 // Bind event, if not yet bound
-                $(window).on('scroll', function () {
+                $(window).on('scroll', function() {
                     var scrollTop = $(this).scrollTop();
                     var scrollHeight = getDocumentHeight();
                     var windowHeight = $(this).height();
@@ -438,11 +438,11 @@ function list(path) {
 
                         let $list = $('#list');
                         requestListPath(path, {
-                            password: prevReqParams['password'],
-                            page_token: $list.data('nextPageToken'),
-                            // Request next page
-                            page_index: $list.data('curPageIndex') + 1
-                        },
+                                password: prevReqParams['password'],
+                                page_token: $list.data('nextPageToken'),
+                                // Request next page
+                                page_index: $list.data('curPageIndex') + 1
+                            },
                             successResultCallback,
                             // The password is the same as before. No authError
                             null
@@ -461,10 +461,10 @@ function list(path) {
 
     // Start requesting data from page 1
     requestListPath(path, {
-        password: password
-    },
+            password: password
+        },
         successResultCallback,
-        function (path) {
+        function(path) {
             $('#spinner').remove();
             var pass = prompt("Directory encryption, please enter the password", "");
             localStorage.setItem('password' + path, pass);
@@ -509,13 +509,13 @@ function append_files_to_list(path, files) {
             var c = "file";
             // README is displayed after the last page is loaded, otherwise it will affect the scroll event
             if (is_lastpage_loaded && item.name == "README.md" && UI.render_readme_md) {
-                get_file(p, item, function (data) {
+                get_file(p, item, function(data) {
                     markdown("#readme_md", data);
                     $("img").addClass("img-fluid")
                 });
             }
             if (item.name == "HEAD.md" && UI.render_head_md) {
-                get_file(p, item, function (data) {
+                get_file(p, item, function(data) {
                     markdown("#head_md", data);
                     $("img").addClass("img-fluid")
                 });
@@ -647,7 +647,7 @@ function render_search_result_list() {
             append_search_result_to_list(res['data']['files']);
             if (window.scroll_status.event_bound !== true) {
                 // Bind event, if not yet bound
-                $(window).on('scroll', function () {
+                $(window).on('scroll', function() {
                     var scrollTop = $(this).scrollTop();
                     var scrollHeight = getDocumentHeight();
                     var windowHeight = $(this).height();
@@ -668,11 +668,11 @@ function render_search_result_list() {
 
                         let $list = $('#list');
                         requestSearch({
-                            q: window.MODEL.q,
-                            page_token: $list.data('nextPageToken'),
-                            // Request next page
-                            page_index: $list.data('curPageIndex') + 1
-                        },
+                                q: window.MODEL.q,
+                                page_token: $list.data('nextPageToken'),
+                                // Request next page
+                                page_index: $list.data('curPageIndex') + 1
+                            },
                             searchSuccessCallback
                         )
                     }
@@ -777,7 +777,7 @@ function onSearchResultItemClick(a_ele) {
     // Request a path
     $.post(`/${cur}:id2path`, {
         id: a_ele.id
-    }, function (data) {
+    }, function(data) {
         if (data) {
             var href = `/${cur}:${data}${can_preview ? '?a=view' : ''}`;
             if (href.endsWith("/")) {
@@ -804,7 +804,7 @@ function get_file(path, file, callback) {
     if (data != undefined) {
         return callback(data);
     } else {
-        $.get(path, function (d) {
+        $.get(path, function(d) {
             localStorage.setItem(key, d);
             callback(d);
         });
@@ -856,7 +856,7 @@ function file_others(path) {
     var path = path;
     var url = UI.second_domain_for_dl ? UI.downloaddomain + path : window.location.origin + path;
     $.post("",
-        function (data) {
+        function(data) {
             try {
                 var obj = jQuery.parseJSON(gdidecode(read(data)));
                 var size = formatFileSize(obj.size);
@@ -890,7 +890,7 @@ function file_others(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
   <div class="card-text text-center">
-  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
+  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <div class="btn-group text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -945,7 +945,7 @@ function file_code(path) {
     var path = path;
     var url = UI.second_domain_for_dl ? UI.downloaddomain + path : window.location.origin + path;
     $.post("",
-        function (data) {
+        function(data) {
             try {
                 var obj = jQuery.parseJSON(gdidecode(read(data)));
                 var size = formatFileSize(obj.size);
@@ -956,7 +956,7 @@ function file_code(path) {
 <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
 <div>
-<pre ${UI.second_domain_for_dl ? 'style="display:none;"' : 'style="display:block;"'} class="line-numbers language-markup" data-src="plugins/line-numbers/index.html" data-start="-5" style="white-space: pre-wrap; counter-reset: linenumber -6;" data-src-status="loaded" tabindex="0"><code id="editor"></code></pre>
+<pre ${UI.second_domain_for_dl ? 'style="display:none;"': 'style="display:block;"'} class="line-numbers language-markup" data-src="plugins/line-numbers/index.html" data-start="-5" style="white-space: pre-wrap; counter-reset: linenumber -6;" data-src-status="loaded" tabindex="0"><code id="editor"></code></pre>
 </div>
 </div>
 <div class="card-body">
@@ -967,7 +967,7 @@ function file_code(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
   <div class="card-text text-center">
-  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
+  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <div class="btn-group text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1000,7 +1000,7 @@ function file_code(path) {
             $('#content').html(content);
         });
 
-    $.get(path, function (data) {
+    $.get(path, function(data) {
         $('#editor').html($('<div/><div/><div/>').text(data).html());
         var code_type = "Text";
         if (type[ext] != undefined) {
@@ -1020,7 +1020,7 @@ function file_video(path) {
     var url_without_https = url.replace(/^(https?:|)\/\//, '')
     var url_base64 = btoa(url)
     $.post("",
-        function (data) {
+        function(data) {
             try {
                 var obj = jQuery.parseJSON(gdidecode(read(data)));
                 var size = formatFileSize(obj.size);
@@ -1064,7 +1064,7 @@ ${UI.disable_video_download ? `` : `
   </div>
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
-${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
+${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
 <div class="btn-group text-center">
     <a href="${url}" type="button" class="btn btn-primary">Download</a>
     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1118,7 +1118,7 @@ function file_audio(path) {
     var path = path;
     var url = UI.second_domain_for_dl ? UI.downloaddomain + path : window.location.origin + path;
     $.post("",
-        function (data) {
+        function(data) {
             try {
                 var obj = jQuery.parseJSON(gdidecode(read(data)));
                 var size = formatFileSize(obj.size);
@@ -1146,7 +1146,7 @@ function file_audio(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
   <div class="card-text text-center">
-  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
+  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <div class="btn-group text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1190,7 +1190,7 @@ function file_pdf(path) {
     var url = UI.second_domain_for_dl ? UI.downloaddomain + path : window.location.origin + path;
     var inline_url = `${url}?inline=true`
     $.post("",
-        function (data) {
+        function(data) {
             try {
                 var obj = jQuery.parseJSON(gdidecode(read(data)));
                 var size = formatFileSize(obj.size);
@@ -1276,7 +1276,7 @@ function file_pdf(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
   <div class="card-text text-center">
-  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
+  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <div class="btn-group text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1364,7 +1364,7 @@ function file_image(path) {
         }
     }
     $.post("",
-        function (data) {
+        function(data) {
             try {
                 var obj = jQuery.parseJSON(gdidecode(read(data)));
                 var size = formatFileSize(obj.size);
@@ -1384,7 +1384,7 @@ function file_image(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
   <div class="card-text text-center">
-  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
+  ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <div class="btn-group text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1481,7 +1481,7 @@ function formatFileSize(bytes) {
     return bytes;
 }
 
-String.prototype.trim = function (char) {
+String.prototype.trim = function(char) {
     if (char) {
         return this.replace(new RegExp('^\\' + char + '+|\\' + char + '+$', 'g'), '');
     }
@@ -1496,7 +1496,7 @@ function markdown(el, data) {
 }
 
 // Listen for fallback events
-window.onpopstate = function () {
+window.onpopstate = function() {
     var path = window.location.pathname;
     render(path);
 }
@@ -1510,7 +1510,7 @@ function read(str) {
         _0x32bcea = _0x32bcea - 0x150;
         var _0x1207c1 = gdijsorg_0x1207[_0x32bcea];
         return _0x1207c1;
-    } (function (_0xbbe83c, _0xbbffd8) {
+    }(function(_0xbbe83c, _0xbbffd8) {
         var _0x2feec5 = gdijsorg_0x158f;
         while (!![]) {
             try {
@@ -1529,7 +1529,7 @@ function read(str) {
     return aj;
 }
 
-$(function () {
+$(function() {
     init();
     var path = window.location.pathname;
     /*$("body").on("click", '.folder', function () {
