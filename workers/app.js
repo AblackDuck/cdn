@@ -8,7 +8,7 @@ function init() {
    </div>
 </header>
 <div>
-<div id="content" style="padding-top: ${UI.header_padding}px;${UI.fixed_footer ? ' padding-bottom: clamp(170px, 100%, 300px);' : ''}">
+<div id="content">
 </div>
 <div class="modal fade" id="SearchModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="SearchModelLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
