@@ -294,7 +294,7 @@ function list(path) {
     <div id="head_md" style="display:none; padding: 20px 20px;"></div>
     <div class="justify-items-start alert">
   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <div class="breadcrumb" id="folderne"><li class="text-sm breadcrumbs"><a href="/1:/">Home</a></li>`;
+    <div class="text-sm breadcrumbs" id="folderne"> <ul> <li class=""><a href="/1:/">Home</a></li>`;
     var navlink = '';
     var navfulllink = window.location.pathname;
     var breadbar = '';
@@ -320,7 +320,7 @@ function list(path) {
             content += `<li class="breadcrumb-item"><a href="${p}">${n}</a></li>`;
         }
     }
-    content += `</div>
+    content += `</ul> </div>
   </nav>
   </div>
     <div id="list" class="list-group text-break">
