@@ -139,18 +139,9 @@ function nav(path) {
       <li class="nav-item">
         <a class="nav-link" href="/${cur}:/">${UI.nav_link_1}</a>
       </li>`;
-
-
     // Dropdown to select different drive roots.
-
-
-
-
     html += `</div></li>
-
   </li>${UI.show_logout_button ? '<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>' : ''}`;
-
-
     var search_bar = `
 </ul>
 
