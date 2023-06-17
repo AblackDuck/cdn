@@ -261,15 +261,10 @@ function nav(path) {
     }
 
     $('#nav').html(html);
-}
 
-// Sleep Function to Retry API Calls
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-        currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
+
+
+    
 }
 var toggle = document.getElementById("theme-toggle");
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" :
@@ -293,6 +288,15 @@ function switchtheme(data) {
   localStorage.setItem('theme', theme);
 
 };
+// Sleep Function to Retry API Calls
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
 /**
  * Initiate POST request for listing
  * @param path Path
