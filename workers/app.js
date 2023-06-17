@@ -828,7 +828,7 @@ function file_others(path) {
 <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
 </div>
-<div class="card-body">
+<div class="flex justify-center">
 <div class="input-group mb-4 hidden">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -841,7 +841,7 @@ function file_others(path) {
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
      
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success btn-outline ml-4"> <span class="tooltiptext" id="myTooltip">Copy</span> </button>
   </div>
   <br></div>`;
                 }
@@ -898,7 +898,7 @@ function file_code(path) {
 <pre ${UI.second_domain_for_dl ? 'style="display:none;"' : 'style="display:block;"'} class="line-numbers language-markup" data-src="plugins/line-numbers/index.html" data-start="-5" style="white-space: pre-wrap; counter-reset: linenumber -6;" data-src-status="loaded" tabindex="0"><code id="editor"></code></pre>
 </div>
 </div>
-<div class="card-body">
+<div class="flex justify-center">
 <div class="input-group mb-4 hidden">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -911,7 +911,7 @@ function file_code(path) {
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
     
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br></div>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success btn-outline ml-4"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br></div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js" integrity="sha256-fZOd7N/oofoKcO92RzxvC0wMm+EvsKyRT4nmcmQbgzU=" crossorigin="anonymous"></script>
 `;
             } catch (err) {
@@ -989,7 +989,7 @@ function file_video(path) {
    const player = new Plyr('#vplayer',{ratio: "${UI.plyr_io_video_resolution}"});
   </script></br>
 ${UI.disable_video_download ? `` : `
-<div class="card-body">
+<div class="flex justify-center">
 <div class="input-group mb-4 hidden">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -1001,7 +1001,7 @@ ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://d
     <a href="${url}" type="button" class="btn btn-primary">Download</a>
    
 </div>
-<button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button>
+<button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success btn-outline ml-4"> <span class="tooltiptext" id="myTooltip">Copy</span> </button>
 <br>
   </div>
   </div>
@@ -1054,7 +1054,7 @@ function file_audio(path) {
   <script>
    const player = new Plyr('#vplayer');
   </script></br>
-  <div class="card-body">
+  <div class="flex justify-center">
 <div class="input-group mb-4 hidden">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -1067,7 +1067,7 @@ function file_audio(path) {
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
     
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success btn-outline ml-4"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
   </div>
   </div>
   </div>
@@ -1177,7 +1177,7 @@ function file_pdf(path) {
   </div><br>
   <canvas id="the-canvas" style="max-width: 100%;"></canvas>
   </div>
-  <div class="card-body">
+  <div class="flex justify-center">
 <div class="input-group mb-4 hidden">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -1190,7 +1190,7 @@ function file_pdf(path) {
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
      
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success btn-outline ml-4"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
   </div>
   </div>
   </div>
@@ -1278,7 +1278,7 @@ function file_image(path) {
   <div>${targetText}</div><br>
   <img src="${url}" width="50%">
   </div>
-  <div class="card-body">
+  <div class="flex justify-center">
 <div class="input-group mb-4 hidden">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -1291,7 +1291,7 @@ function file_image(path) {
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
      
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success btn-outline ml-4"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
   </div>
   </div>
   </div>
