@@ -323,7 +323,7 @@ function list(path) {
     content += `</ul> </div>
   </nav>
   </div>
-    <div id="list" class="list-group text-break my-2">
+    <div id="list" class="list-group text-break my-2 bg-base-200">
     </div>
     <div class="${UI.file_count_alert_class} text-center d-none" role="alert" id="count">Total <span class="number text-center"></span> items</div>
     <div id="readme_md" style="display:none; padding: 20px 20px;"></div>
@@ -553,7 +553,7 @@ function render_search_result_list() {
   <div id="update"></div>
   <div class="card">
   <div class="${UI.path_nav_alert_class} d-flex align-items-center" role="alert" style="margin-bottom: 0;">Search Results</div>
-  <div id="list" class="list-group text-break my-2">
+  <div id="list" class="list-group text-break my-2 bg-base-200">
   </div>
   </div>
   <div class="${UI.file_count_alert_class} text-center d-none" role="alert" id="count">Total <span class="number text-center"></span> items</div>
