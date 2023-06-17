@@ -292,8 +292,8 @@ function list(path) {
     var content = `<div class="container">
   <div id="update"></div>
     <div id="head_md" style="display:none; padding: 20px 20px;"></div>
-    <div class="${UI.path_nav_alert_class} d-flex align-items-center" role="alert" ">
-  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <div class="justify-items-start">
+  <nav'>';" aria-label="breadcrumb">
     <div class="breadcrumb" id="folderne"><a class="breadcrumb-item"><a href="/">Home</a></a>`;
     var navlink = '';
     var navfulllink = window.location.pathname;
