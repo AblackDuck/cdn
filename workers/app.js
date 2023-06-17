@@ -837,7 +837,7 @@ function file_others(path) {
 </div>
   <div class="card-text text-center">
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
-  <div class="btn-group text-center">
+  <div class=" text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
      
   </div>
@@ -907,7 +907,7 @@ function file_code(path) {
 </div>
   <div class="card-text text-center">
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
-  <div class="btn-group text-center">
+  <div class=" text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
     
   </div>
@@ -997,7 +997,7 @@ ${UI.disable_video_download ? `` : `
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
 ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
-<div class="btn-group text-center">
+<div class=" text-center">
     <a href="${url}" type="button" class="btn btn-primary">Download</a>
    
 </div>
@@ -1063,7 +1063,7 @@ function file_audio(path) {
 </div>
   <div class="card-text text-center">
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
-  <div class="btn-group text-center">
+  <div class=" text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
     
   </div>
@@ -1186,7 +1186,7 @@ function file_pdf(path) {
 </div>
   <div class="card-text text-center">
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
-  <div class="btn-group text-center">
+  <div class="text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
      
   </div>
@@ -1287,7 +1287,7 @@ function file_image(path) {
 </div>
   <div class="card-text text-center">
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/' + obj.id + '/view" id ="file_drive_link" target="_blank">GD Link</a>' : ''}
-  <div class="btn-group text-center">
+  <div class=" text-center">
       <a href="${url}" type="button" class="btn btn-primary">Download</a>
      
   </div>
