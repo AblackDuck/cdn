@@ -976,7 +976,7 @@ function file_video(path) {
                     var poster = UI.poster;
                 }
                 var content = `
-  <div class="container text-center"><br>
+  <div class="mx-2 max-w-screen-xl px-0 py-10 sm:px-8 md:mx-auto md:px-24 md:py-10 lg:px-44"><br>
   <div class="card text-center">
   <div class="text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
