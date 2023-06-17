@@ -1055,7 +1055,7 @@ function file_audio(path) {
    const player = new Plyr('#vplayer');
   </script></br>
   <div class="flex justify-center">
-<div class="input-group mb-4 hidden">
+<div class="input-group mb-4 ">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
   </div>
