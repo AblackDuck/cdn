@@ -128,26 +128,10 @@ function nav(path) {
     var model = window.MODEL;
     var html = "";
     var cur = window.current_drive_order || 0;
-    html += `<nav>
-    <div class="container-fluid">
-  <a class="navbar-brand" href="/1:/">${UI.logo_image ? '<img border="0" alt="' + UI.company_name + '" src="' + UI.logo_link_name + '" height="' + UI.logo_height + '" width="' + UI.logo_width + '">' : UI.logo_link_name}</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="/${cur}:/">${UI.nav_link_1}</a>
-      </li>`;
-    // Dropdown to select different drive roots.
-    html += `</div></li>
-  </li>${UI.show_logout_button ? '<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>' : ''}`;
-    var search_bar = `
-</ul>
-<div id="boxnav" class="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 text-primary backdrop-blur"><nav class="navbar w-full"> <div class="flex flex-1 items-center gap-2"><a href="/" class="flex-0 btn-ghost btn px-2"><div class="font-title inline-flex text-lg text-primary"><span class="text-primary">DarkAce</span> <span class="text-accent">&nbsp;</span><span class="text-base-content">FS</span></div></a></div> <div class="flex-0 mr-2">  <span class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="Home"><div class="flex-none items-center"><a aria-label="Home" href="/" rel="noopener" class="btn-ghost drawer-button btn-square btn normal-case"><svg width="10" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35" class="inline-block h-5 w-5 fill-current md:h-6 md:w-6"><path d="M30.814 13.051l-14.001-12c-0.217-0.187-0.502-0.3-0.813-0.3s-0.596 0.114-0.815 0.302l0.002-0.001-14 12c-0.268 0.23-0.437 0.57-0.437 0.948 0 0 0 0.001 0 0.001v-0 16c0 0.69 0.56 1.25 1.25 1.25h28c0.69-0.001 1.249-0.56 1.25-1.25v-16c-0-0.379-0.168-0.718-0.434-0.948l-0.002-0.001zM12.25 28.75v-4.75c0-2.071 1.679-3.75 3.75-3.75s3.75 1.679 3.75 3.75v0 4.75zM28.75 28.75h-6.5v-4.75c0-3.452-2.798-6.25-6.25-6.25s-6.25 2.798-6.25 6.25v0 4.75h-6.5v-14.175l12.75-10.929 12.75 10.929z"></path></svg></a></div></span></div></nav></div>
-</div>
-</div>
-</nav>
+    html += `
+    <div id="boxnav" class="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 text-primary backdrop-blur"><nav class="navbar w-full"> <div class="flex flex-1 items-center gap-2"><a href="/" class="flex-0 btn-ghost btn px-2"><div class="font-title inline-flex text-lg text-primary"><span class="text-primary">DarkAce</span> <span class="text-accent">&nbsp;</span><span class="text-base-content">FS</span></div></a></div> <div class="flex-0 mr-2">  <span class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="Home"><div class="flex-none items-center"><a aria-label="Home" href="/" rel="noopener" class="btn-ghost drawer-button btn-square btn normal-case"><svg width="10" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35" class="inline-block h-5 w-5 fill-current md:h-6 md:w-6"><path d="M30.814 13.051l-14.001-12c-0.217-0.187-0.502-0.3-0.813-0.3s-0.596 0.114-0.815 0.302l0.002-0.001-14 12c-0.268 0.23-0.437 0.57-0.437 0.948 0 0 0 0.001 0 0.001v-0 16c0 0.69 0.56 1.25 1.25 1.25h28c0.69-0.001 1.249-0.56 1.25-1.25v-16c-0-0.379-0.168-0.718-0.434-0.948l-0.002-0.001zM12.25 28.75v-4.75c0-2.071 1.679-3.75 3.75-3.75s3.75 1.679 3.75 3.75v0 4.75zM28.75 28.75h-6.5v-4.75c0-3.452-2.798-6.25-6.25-6.25s-6.25 2.798-6.25 6.25v0 4.75h-6.5v-14.175l12.75-10.929 12.75 10.929z"></path></svg></a></div></span></div></nav></div>
+
+
 `;
 
     // Personal or team
