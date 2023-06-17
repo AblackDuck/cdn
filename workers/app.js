@@ -271,7 +271,28 @@ function sleep(milliseconds) {
         currentDate = Date.now();
     } while (currentDate - date < milliseconds);
 }
+var toggle = document.getElementById("theme-toggle");
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" :
+  "lofi");
+if (storedTheme)
+  document.documentElement.setAttribute('data-theme', storedTheme)
+toggle.onclick = function () {
+  var currentTheme = document.documentElement.getAttribute("data-theme");
+  var targetTheme = "lofi";
 
+  if (currentTheme === "lofi") {
+    targetTheme = "dark";
+  }
+  document.documentElement.setAttribute('data-theme', targetTheme)
+  localStorage.setItem('theme', targetTheme);
+};
+
+function switchtheme(data) {
+  const theme = data.getAttribute("data-theme");
+  document.documentElement.setAttribute('data-theme', theme)
+  localStorage.setItem('theme', theme);
+
+};
 /**
  * Initiate POST request for listing
  * @param path Path
