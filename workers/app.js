@@ -289,7 +289,7 @@ function requestSearch(params, resultCallback) {
 
 // Render file list
 function list(path) {
-    var content = `<div class="mx-2 max-w-screen-xl px-0 py-10 sm:px-8 md:mx-auto md:px-24 md:py-10 lg:px-44">
+    var content = `<div class="mx-2 max-w-screen-xl px-0 pb-10 sm:px-8 md:mx-auto md:px-24 md:py-10 lg:px-44">
   <div id="update"></div>
     <div id="head_md" style="display:none; padding: 20px 20px;"></div>
     <div class="justify-items-start alert">
@@ -962,7 +962,7 @@ function file_video(path) {
                     var poster = UI.poster;
                 }
                 var content = `
-  <div class="mx-2 max-w-screen-xl px-0 py-10 sm:px-8 md:mx-auto md:px-24 md:py-10 lg:px-44"><br>
+  <div class="mx-2 max-w-screen-xl px-0 pb-10 sm:px-8 md:mx-auto md:px-24 md:py-10 lg:px-44"><br>
   <div class="card text-center">
   <div class="text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
