@@ -826,7 +826,7 @@ function file_others(path) {
 <div class="container"><br>
 <div class="card text-center">
 <div class="card-body text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
+  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name} <span class="btn btn-xs float-end"> ${size}</span> </div>
 </div>
 <div class="card-body">
 <div class="input-group mb-4">
