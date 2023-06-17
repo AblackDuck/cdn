@@ -135,122 +135,8 @@ function nav(path) {
   </li>${UI.show_logout_button ? '<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>' : ''}`;
     var search_bar = `
 </ul>
-<div class=" absolute top-0 z-30 flex h-16 w-full backdrop-blur justify-center bg-opacity-90 transition-all duration-100 text-primary">
-  <nav class="navbar w-full">
-    
-    <div class="flex flex-1 items-center gap-2 ">
-      <a href="/" class="flex-0 btn btn-ghost px-2 ">
-        <div class="font-title text-primary inline-flex text-lg transition-all duration-200"><span class=" text-primary">kuroe</span> <span class="text-accent">&nbsp;</span><span class=" text-base-content">blog</span></div>
-      </a>
-    </div>
-    <div class="flex-0">
-      <div title="Change Theme" class="dropdown dropdown-end ">
-        <div tabindex="0" class="btn gap-1 normal-case btn-ghost">
-          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
-            </path>
-          </svg>
-          <span class="hidden md:inline">Theme</span>
-          <svg width="12px" height="12px" class="ml-1 hidden h-3 w-3 fill-current opacity-60 sm:inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
-            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-          </svg>
-        </div>
-        <div class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px max-h-96 h-[70vh] w-52 overflow-y-auto shadow-2xl mt-16">
-          <div class="grid grid-cols-1 gap-3 p-3" tabindex="0">
-            <button class="outline-base-content overflow-hidden rounded-lg text-left">
-              <div onclick="switchtheme(this)" data-theme="lofi" class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
-                <div class="grid grid-cols-5 grid-rows-3">
-                  <div class="col-span-5 row-span-3 row-start-1 flex gap-2 py-3 px-4 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 invisible">
-                      <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z">
-                      </path>
-                    </svg>
-                    <div class="flex-grow text-sm font-bold">light</div>
-                    <div class="flex flex-shrink-0 flex-wrap gap-1 h-full">
-                      <div class="bg-primary w-2 rounded"></div>
-                      <div class="bg-secondary w-2 rounded"></div>
-                      <div class="bg-accent w-2 rounded"></div>
-                      <div class="bg-neutral w-2 rounded"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-            <button class="outline-base-content overflow-hidden rounded-lg text-left">
-              <div onclick="switchtheme(this)" data-theme="dark" class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
-                <div class="grid grid-cols-5 grid-rows-3">
-                  <div class="col-span-5 row-span-3 row-start-1 flex gap-2 py-3 px-4 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 invisible">
-                      <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z">
-                      </path>
-                    </svg>
-                    <div class="flex-grow text-sm font-bold">dark</div>
-                    <div class="flex flex-shrink-0 flex-wrap gap-1 h-full">
-                      <div class="bg-primary w-2 rounded"></div>
-                      <div class="bg-secondary w-2 rounded"></div>
-                      <div class="bg-accent w-2 rounded"></div>
-                      <div class="bg-neutral w-2 rounded"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-            <button class="outline-base-content overflow-hidden rounded-lg text-left">
-              <div onclick="switchtheme(this)" data-theme="winter" class="bg-base-100 text-base-content w-full cursor-pointer font-sans">
-                <div class="grid grid-cols-5 grid-rows-3">
-                  <div class="col-span-5 row-span-3 row-start-1 flex gap-2 py-3 px-4 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 invisible">
-                      <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z">
-                      </path>
-                    </svg>
-                    <div class="flex-grow text-sm font-bold">winter</div>
-                    <div class="flex flex-shrink-0 flex-wrap gap-1 h-full">
-                      <div class="bg-primary w-2 rounded"></div>
-                      <div class="bg-secondary w-2 rounded"></div>
-                      <div class="bg-accent w-2 rounded"></div>
-                      <div class="bg-neutral w-2 rounded"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </button>
-            
-          </div>
-        </div>
-      </div>
-      <span id="theme-toggle" class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="Change Theme">
-        <div class="flex-none items-center">
-          <a aria-label="Change Theme" rel="noopener" class="btn btn-ghost drawer-button btn-square normal-case">
-            <svg class="inline-block h-5 w-5 stroke-current" fill="none" width="64px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <title></title>
-                <g data-name="Layer 88" id="Layer_88">
-                  <path d="M18,27H14a2,2,0,0,1-2-2V21.16a10,10,0,0,1-6-9.47A10.14,10.14,0,0,1,15.69,2h0A10,10,0,0,1,20,21.16V25A2,2,0,0,1,18,27ZM15.75,4A8.12,8.12,0,0,0,8,11.75a8,8,0,0,0,5.33,7.79,1,1,0,0,1,.67.94V25h4V20.48a1,1,0,0,1,.67-.94,8,8,0,0,0,2.9-13.28A7.85,7.85,0,0,0,15.75,4Z">
-                  </path>
-                  <path d="M19,30H13a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z"></path>
-                  <path d="M15,24V19.48a9,9,0,0,1-6-8.76c.09-3,1.71-4.93,4.52-6.32C9.49,4.47,7.12,8,7,11.72a9,9,0,0,0,6,8.76V25a1,1,0,0,0,1,1h4a1,1,0,0,0,1-1H16A1,1,0,0,1,15,24Z">
-                  </path>
-                </g>
-              </g>
-            </svg>
-          </a>
-        </div>
-      </span>
-      <span class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="Home">
-        <div class="flex-none items-center">
-          <a aria-label="Home" href="/" rel="noopener" class="btn btn-ghost drawer-button btn-square normal-case">
-            <svg width="10" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35" class="inline-block h-5 w-5 fill-current md:h-6 md:w-6">
-              <path d="M30.814 13.051l-14.001-12c-0.217-0.187-0.502-0.3-0.813-0.3s-0.596 0.114-0.815 0.302l0.002-0.001-14 12c-0.268 0.23-0.437 0.57-0.437 0.948 0 0 0 0.001 0 0.001v-0 16c0 0.69 0.56 1.25 1.25 1.25h28c0.69-0.001 1.249-0.56 1.25-1.25v-16c-0-0.379-0.168-0.718-0.434-0.948l-0.002-0.001zM12.25 28.75v-4.75c0-2.071 1.679-3.75 3.75-3.75s3.75 1.679 3.75 3.75v0 4.75zM28.75 28.75h-6.5v-4.75c0-3.452-2.798-6.25-6.25-6.25s-6.25 2.798-6.25 6.25v0 4.75h-6.5v-14.175l12.75-10.929 12.75 10.929z">
-              </path>
-            </svg>
-          </a>
-        </div>
-      </span>
-    </div>
-  </nav>
-</div>
+<div  data-theme="dark" id="boxnav" class="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 text-primary backdrop-blur"><nav class="navbar w-full"> <div class="flex flex-1 items-center gap-2"><a href="/1:/" class="flex-0 btn-ghost btn px-2"><div class="font-title inline-flex text-lg text-primary"><span class="" style="color: #35b7f1;">DarkAce</span> <span class="text-accent">&nbsp;</span><span class="text-base-content">FS</span></div></a></div> <div class="flex-0 mr-2">  <span  style="color: #35b7f1;" class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]" data-tip="Home"><div class="flex-none items-center"><a aria-label="Home" href="/1:/" rel="noopener" class="btn-ghost drawer-button btn-square btn normal-case"><svg width="10" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35" class="inline-block h-5 w-5 fill-current md:h-6 md:w-6"><path d="M30.814 13.051l-14.001-12c-0.217-0.187-0.502-0.3-0.813-0.3s-0.596 0.114-0.815 0.302l0.002-0.001-14 12c-0.268 0.23-0.437 0.57-0.437 0.948 0 0 0 0.001 0 0.001v-0 16c0 0.69 0.56 1.25 1.25 1.25h28c0.69-0.001 1.249-0.56 1.25-1.25v-16c-0-0.379-0.168-0.718-0.434-0.948l-0.002-0.001zM12.25 28.75v-4.75c0-2.071 1.679-3.75 3.75-3.75s3.75 1.679 3.75 3.75v0 4.75zM28.75 28.75h-6.5v-4.75c0-3.452-2.798-6.25-6.25-6.25s-6.25 2.798-6.25 6.25v0 4.75h-6.5v-14.175l12.75-10.929 12.75 10.929z"></path></svg></a></div></span></div></nav></div>
+
 
 `;
 
@@ -261,33 +147,8 @@ function nav(path) {
     }
 
     $('#nav').html(html);
-
-
-
-    
 }
-var toggle = document.getElementById("theme-toggle");
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" :
-  "lofi");
-if (storedTheme)
-  document.documentElement.setAttribute('data-theme', storedTheme)
-toggle.onclick = function () {
-  var currentTheme = document.documentElement.getAttribute("data-theme");
-  var targetTheme = "lofi";
 
-  if (currentTheme === "lofi") {
-    targetTheme = "dark";
-  }
-  document.documentElement.setAttribute('data-theme', targetTheme)
-  localStorage.setItem('theme', targetTheme);
-};
-
-function switchtheme(data) {
-  const theme = data.getAttribute("data-theme");
-  document.documentElement.setAttribute('data-theme', theme)
-  localStorage.setItem('theme', theme);
-
-};
 // Sleep Function to Retry API Calls
 function sleep(milliseconds) {
     const date = Date.now();
