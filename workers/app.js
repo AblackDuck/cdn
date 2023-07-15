@@ -4,11 +4,11 @@
 function init() {
     document.siteName = $('title').html();
     var html = `<header>
-   <div id="nav" data-theme="dark">
+   <div id="nav">
    </div>
 </header>
 <div>
-<div id="content"  data-theme="dark">
+<div id="content">
 </div>
 <div class="modal fade" id="SearchModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="SearchModelLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
