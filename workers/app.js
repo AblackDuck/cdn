@@ -4,7 +4,7 @@
 function init() {
     document.siteName = $('title').html();
     var html = `<header>
-   <div id="nav">
+   <div id="nav" bg-base-200 mb-4>
    </div>
 </header>
 <div>
@@ -826,7 +826,7 @@ function file_others(path) {
 <div class="container"><br>
 <div class="card text-center">
 <div class="card-body text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
+  <div class="${UI.file_view_alert_class} gap-0" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
 </div>
 <div class="flex justify-center alert">
 <div class="input-group mb-4 hidden">
@@ -893,7 +893,7 @@ function file_code(path) {
 <div class="container"><br>
 <div class="card text-center">
 <div class="card-body text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
+  <div class="${UI.file_view_alert_class} gap-0" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
 <div>
 <pre ${UI.second_domain_for_dl ? 'style="display:none;"' : 'style="display:block;"'} class="line-numbers language-markup" data-src="plugins/line-numbers/index.html" data-start="-5" style="white-space: pre-wrap; counter-reset: linenumber -6;" data-src-status="loaded" tabindex="0"><code id="editor"></code></pre>
 </div>
@@ -965,7 +965,7 @@ function file_video(path) {
   <div class="mx-2 max-w-screen-xl px-0 pb-10 sm:px-8 md:mx-auto md:px-24 md:py-10 lg:px-44"><br>
   <div class="card text-center">
   <div class="text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
+  <div class="${UI.file_view_alert_class} gap-0" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
   <video id="vplayer" width="100%" height="100%" playsinline controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen']; data-plyr-config="{ "title": "${decodename}"}" data-poster="${poster}" style="--plyr-captions-text-color: #ffffff;--plyr-captions-background: #000000;">
     <source src="${url}" type="video/mp4" />
     <source src="${url}" type="video/webm" />
@@ -1042,7 +1042,7 @@ function file_audio(path) {
   <div class="container"><br>
   <div class="card" style="background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);">
   <div class="card-body text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
+  <div class="${UI.file_view_alert_class} gap-0" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
   <br><img draggable="false" src="${UI.audioposter}" width="100%" /><br>
   <audio id="vplayer" width="100%" playsinline controls>
     <source src="${url}" type="audio/ogg">
@@ -1168,7 +1168,7 @@ function file_pdf(path) {
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
+  <div class="${UI.file_view_alert_class} gap-0" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
   <div>
   <button id="prev" class="btn btn-info">Previous</button>
   <button id="next" class="btn btn-info">Next</button>
@@ -1274,7 +1274,7 @@ function file_image(path) {
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
-  <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
+  <div class="${UI.file_view_alert_class} gap-0" id="file_details" role="alert">${obj.name}<span class="btn  float-end"> ${size}</span></div>
   <div>${targetText}</div><br>
   <img src="${url}" width="50%">
   </div>
