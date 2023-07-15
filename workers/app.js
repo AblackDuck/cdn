@@ -4,7 +4,7 @@
 function init() {
     document.siteName = $('title').html();
     var html = `<header>
-   <div id="nav" bg-base-200 mb-4>
+   <div id="nav" bg-base-200 mb-2>
    </div>
 </header>
 <div>
